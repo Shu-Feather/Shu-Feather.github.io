@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Your Name — Ph.D. student at the University of Washington.">
-  <title>Your Name</title>
+  <meta name="description" content="Shuyang Hou — Ph.D. student at the University of Washington working on NLP and AI for Science.">
+  <title>Shuyang Hou</title>
   <style>
     :root {
       --text: #1a1a1a;
@@ -94,6 +94,16 @@
       color: #a0a8b3;
       font-size: 12px;
     }
+    .thumb-placeholder.badge {
+      background: #f5f7fa;
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      text-align: center;
+    }
+    .paper .title a { color: var(--text); }
+    .paper .title a:hover { color: var(--link-hover); }
     .paper .meta { flex: 1 1 320px; }
     .paper .title { font-weight: 700; }
     .paper .authors { margin: 2px 0; }
@@ -132,92 +142,138 @@
   <!-- ================= HEADER ================= -->
   <div class="header">
     <div class="intro">
-      <h1>Your Name <span lang="zh">中文名</span></h1>
+      <h1>Shuyang Hou 侯书洋</h1>
       <p>
-        My name is Your Name. I am a Ph.D. student (09/20XX&ndash;present) at the
+        I am currently a Ph.D. student (09/2026&ndash;present) at the
         <a href="https://www.cs.washington.edu/">Paul G. Allen School of Computer Science &amp; Engineering</a>,
         University of Washington, where I am advised by
-        <a href="#">Prof. Advisor One</a> and <a href="#">Prof. Advisor Two</a>.
-        I previously received my Bachelor's degree from
-        <a href="#">Your Undergraduate Institution</a> in 06/20XX.
-        My research focuses on [your research area — e.g., large language models, ...].
+        <a href="https://simonshaoleidu.com/">Prof. Simon Du</a> and <a href="https://www.ting-ye.com/">Prof. Ting Ye</a>.
+        I previously received my Bachelor of Science and Bachelor of Engineering dual degrees from
+        <a href="https://english.pku.edu.cn/">Peking University, Yuanpei College</a> in 06/2026.
+      </p>
+      <p>
+        My current research focuses on NLP and AI for Science. I am interested in understanding
+        what large language models can and cannot do&mdash;from fine-grained, sub-token level text
+        understanding to multi-step scientific reasoning&mdash;and in building computational tools
+        that help answer questions in biology and medicine.
       </p>
       <p class="links">
-        <a href="mailto:you@cs.washington.edu">Email</a> /
-        <a href="#">Google Scholar</a> /
-        <a href="#">Twitter</a> /
-        <a href="#">Github</a> /
-        <a href="#">CV</a>
+        <a href="mailto:shuyoung@cs.washington.edu">Email</a> /
+        <a href="https://scholar.google.com/citations?user=fuExBvoAAAAJ&hl=en">Google Scholar</a> /
+        <a href="https://github.com/Shu-Feather">Github</a> /
+        <a href="https://orcid.org/0009-0005-2314-9371">ORCID</a>
+        <!-- / <a href="files/CV.pdf">CV</a> -->
       </p>
     </div>
     <div class="photo">
-      <!-- Replace this placeholder with: <img src="images/profile.jpg" alt="Your Name"> -->
-      <div class="photo-placeholder">Your photo<br>(images/profile.jpg)</div>
+      <img src="images/shuyang.jpeg" alt="Shuyang Hou">
     </div>
   </div>
 
   <!-- ================= PAPERS ================= -->
   <h2>Papers</h2>
-  <p class="note">* denotes equal contribution</p>
+  <p class="note">Highlighted papers are first-authored.</p>
 
-  <!-- Copy one of these blocks for each paper. Add class "selected" to highlight a favorite. -->
+  <!-- Copy one of these blocks for each paper. Add class "selected" to highlight a favorite.
+       To use a figure instead of the venue badge, replace the badge div with: <img src="images/xxx.png" alt=""> -->
   <div class="paper">
     <div class="thumb">
-      <!-- Replace with: <img src="images/paper1.png" alt=""> -->
-      <div class="thumb-placeholder">thumbnail</div>
+      <div class="thumb-placeholder badge">EMNLP 2026</div>
     </div>
     <div class="meta">
-      <div class="title">Title of Your Most Recent Paper</div>
-      <div class="authors"><span class="me">Your Name</span>, Coauthor Two, Coauthor Three</div>
-      <div class="venue">Conference Name 2026</div>
+      <div class="title"><a href="https://arxiv.org/abs/2608.30517">ScienceArena: Benchmarking LLMs on Latest Scientific Olympiad Competitions</a></div>
+      <div class="authors">
+        Guangxiang Zhao, Qilong Shi, Xusen Xiao, Wenpu Liu, Yaoming Li, Linfeng Hao,
+        <span class="me">Shuyang Hou</span>, Zijian Guo, Xinrui Zhang, Yuntian Zhao, Zhengyang Wang,
+        Wenrui Liu, Yuhan Wu, Tong Yang, Lin Sun, Xiangzheng Zhang
+      </div>
+      <div class="venue">Conference on Empirical Methods in Natural Language Processing (EMNLP), Main Conference, 2026</div>
       <div class="tags">
-        [<a href="#">paper</a>][<a href="#">code</a>]
+        [<a href="https://arxiv.org/abs/2608.30517">paper</a>][<a href="https://science-arena.onrender.com/">demo</a>]
+      </div>
+      <div class="desc">
+        An olympiad-style benchmark built from thirteen recent physics, chemistry, and biology
+        competitions, with expert-audited problems and process-credit rubrics for grading
+        open-ended, multi-step solutions.
+      </div>
+    </div>
+  </div>
+
+  <div class="paper selected">
+    <div class="thumb">
+      <div class="thumb-placeholder badge">ACL 2026</div>
+    </div>
+    <div class="meta">
+      <div class="title"><a href="https://aclanthology.org/2026.acl-long.915">SubTokenTest: A Practical Benchmark for Real-World Sub-token Understanding</a></div>
+      <div class="authors"><span class="me">Shuyang Hou</span>, Yi Hu, Muhan Zhang</div>
+      <div class="venue">Annual Meeting of the Association for Computational Linguistics (ACL), Long Papers, 2026</div>
+      <div class="tags">
+        [<a href="https://aclanthology.org/2026.acl-long.915">paper</a>][<a href="https://arxiv.org/abs/2601.09089">arXiv</a>][<a href="https://github.com/Shu-Feather/SubTokenTest">code</a>][<a href="https://huggingface.co/datasets/Rain-air/SubTokenTest-QA">data</a>]
+      </div>
+      <div class="desc">
+        Ten practical tasks across four domains that isolate tokenization-induced failures from
+        complex reasoning, together with an analysis of test-time scaling and of how character-level
+        information is encoded in hidden states.
       </div>
     </div>
   </div>
 
   <div class="paper">
     <div class="thumb">
-      <div class="thumb-placeholder">thumbnail</div>
+      <div class="thumb-placeholder badge">Bioinformatics</div>
     </div>
     <div class="meta">
-      <div class="title">Another Paper Title Goes Here</div>
-      <div class="authors">Coauthor One*, <span class="me">Your Name</span>*, Coauthor Three</div>
-      <div class="venue">Conference Name 2025</div>
+      <div class="title"><a href="https://doi.org/10.1093/bioinformatics/btaf603">Decoding Cell Fate: Integrated Experimental and Computational Analysis at the Single-Cell Level</a></div>
+      <div class="authors">Yutong Zhou, <span class="me">Shuyang Hou</span>, Xinhao Miao, Guangxin Zhang, Zining Li, Di Zhang, Yongjie Lin, Yihan Lin</div>
+      <div class="venue">Bioinformatics, 41(11): btaf603, 2025</div>
       <div class="tags">
-        [<a href="#">paper</a>][<a href="#">code</a>][<a href="#">demo</a>]
+        [<a href="https://doi.org/10.1093/bioinformatics/btaf603">paper</a>][<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12646649">PMC</a>]
+      </div>
+      <div class="desc">
+        A review connecting classical cell-fate frameworks with single-cell omics, perturbation
+        technologies, and computational (including AI-driven) methods for modeling and predicting cell fate.
       </div>
     </div>
   </div>
 
-  <div class="paper">
-    <div class="thumb">
-      <div class="thumb-placeholder">thumbnail</div>
-    </div>
-    <div class="meta">
-      <div class="title">A Third Example Paper Title</div>
-      <div class="authors"><span class="me">Your Name</span>, Coauthor Two</div>
-      <div class="venue">Workshop / Preprint 2025</div>
-      <div class="tags">
-        [<a href="#">paper</a>]
-      </div>
-    </div>
+  <!-- ================= EDUCATION ================= -->
+  <h2>Education</h2>
+
+  <div class="honor">
+    <div class="what"><b>Ph.D. in Computer Science</b>, Paul G. Allen School of Computer Science &amp; Engineering, University of Washington</div>
+    <div class="when">09/2026&ndash;present</div>
+  </div>
+  <div class="honor">
+    <div class="what"><b>B.S. and B.E. (dual degrees)</b>, Yuanpei College, Peking University</div>
+    <div class="when">09/2022&ndash;06/2026</div>
   </div>
 
   <!-- ================= HONORS ================= -->
   <h2>Honors and Awards</h2>
 
   <div class="honor">
-    <div class="what"><b>Fellowship or Award Name</b>, Awarding Organization</div>
-    <div class="when">09/2025&ndash;09/2027</div>
+    <div class="what"><b>Yuanpei College Young Scholar</b> (awarded to selected undergraduate researcher), Peking University</div>
+    <div class="when">09/2025</div>
   </div>
   <div class="honor">
-    <div class="what"><b>Another Award</b> (one line of context, e.g., selection criteria), Organization</div>
-    <div class="when">12/2024</div>
+    <div class="what"><b>Leo KoGuan Scholarship</b> (Top 1%), Peking University</div>
+    <div class="when">09/2025</div>
   </div>
   <div class="honor">
-    <div class="what"><b>Scholarship Name</b> (Top X%), Organization</div>
-    <div class="when">10/2023</div>
+    <div class="what"><b>China National Scholarship</b> (Top 0.2% nationwide), Ministry of Education, P.R. China</div>
+    <div class="when">10/2024</div>
+  </div>
+  <div class="honor">
+    <div class="what"><b>National Science Fund for Distinguished Undergraduate Researchers</b> (130 undergraduate STEM researchers selected from across China, $15,000), National Natural Science Foundation of China (NSFC)</div>
+    <div class="when">09/2023&ndash;06/2024</div>
+  </div>
+  <div class="honor">
+    <div class="what"><b>May 4th Scholarship</b> (Top 1%), Peking University</div>
+    <div class="when">09/2023</div>
+  </div>
+  <div class="honor">
+    <div class="what"><b>Merit Student Pacesetter</b> (Top 1%), Peking University</div>
+    <div class="when">2023, 2024, 2025</div>
   </div>
 
   <footer>
