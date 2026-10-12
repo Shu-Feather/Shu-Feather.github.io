@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Your Name — Ph.D. student at the University of Washington.">
+  <title>Your Name</title>
+  <style>
+    :root {
+      --text: #1a1a1a;
+      --muted: #555555;
+      --link: #1772d0;
+      --link-hover: #f09228;
+      --rule: #e3e3e3;
+      --highlight: #fff6e4; /* soft highlight for selected papers, optional */
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: var(--text);
+      font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { color: var(--link-hover); }
+    .page {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 48px 16px 64px;
+    }
+    /* ---------- Header: intro text + photo ---------- */
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      align-items: flex-start;
+    }
+    .header .intro { flex: 1 1 420px; }
+    .header .photo { flex: 0 0 200px; text-align: center; }
+    .header .photo img, .header .photo .photo-placeholder {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .photo-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e9edf2;
+      color: #8a94a3;
+      font-size: 14px;
+    }
+    h1 {
+      font-weight: 400;
+      font-size: 30px;
+      margin: 0 0 14px;
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 21px;
+      margin: 44px 0 6px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--rule);
+    }
+    p { margin: 0 0 12px; }
+    .links { margin-top: 10px; font-weight: 700; }
+    .links a { margin-right: 4px; }
+    .note { color: var(--muted); font-size: 14px; margin: 6px 0 18px; }
+
+    /* ---------- Papers ---------- */
+    .paper {
+      display: flex;
+      gap: 20px;
+      padding: 14px 8px;
+      border-radius: 8px;
+    }
+    .paper.selected { background: var(--highlight); }
+    .paper .thumb { flex: 0 0 150px; }
+    .paper .thumb img, .paper .thumb .thumb-placeholder {
+      width: 150px;
+      height: 95px;
+      object-fit: cover;
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+    }
+    .thumb-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f2f4f7;
+      color: #a0a8b3;
+      font-size: 12px;
+    }
+    .paper .meta { flex: 1 1 320px; }
+    .paper .title { font-weight: 700; }
+    .paper .authors { margin: 2px 0; }
+    .paper .authors .me { font-weight: 700; }
+    .paper .venue { font-style: italic; color: var(--muted); }
+    .paper .tags { margin-top: 2px; font-weight: 700; }
+    .paper .tags a { margin-right: 2px; }
+    .paper .desc { margin-top: 4px; color: var(--muted); font-size: 15px; }
+
+    /* ---------- Honors ---------- */
+    .honor { display: flex; gap: 16px; padding: 7px 0; }
+    .honor .what { flex: 1; }
+    .honor .when { flex: 0 0 150px; text-align: right; color: var(--muted); white-space: nowrap; }
+
+    footer {
+      margin-top: 56px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .header { flex-direction: column-reverse; }
+      .header .photo { align-self: center; }
+      .paper { flex-direction: column; gap: 10px; }
+      .paper .thumb, .paper .meta { flex: 0 0 auto; }
+      .honor { flex-direction: column; gap: 0; }
+      .honor .what, .honor .when { flex: 0 0 auto; }
+      .honor .when { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ================= HEADER ================= -->
+  <div class="header">
+    <div class="intro">
+      <h1>Your Name <span lang="zh">中文名</span></h1>
+      <p>
+        My name is Your Name. I am a Ph.D. student (09/20XX&ndash;present) at the
+        <a href="https://www.cs.washington.edu/">Paul G. Allen School of Computer Science &amp; Engineering</a>,
+        University of Washington, where I am advised by
+        <a href="#">Prof. Advisor One</a> and <a href="#">Prof. Advisor Two</a>.
+        I previously received my Bachelor's degree from
+        <a href="#">Your Undergraduate Institution</a> in 06/20XX.
+        My research focuses on [your research area — e.g., large language models, ...].
+      </p>
+      <p class="links">
+        <a href="mailto:you@cs.washington.edu">Email</a> /
+        <a href="#">Google Scholar</a> /
+        <a href="#">Twitter</a> /
+        <a href="#">Github</a> /
+        <a href="#">CV</a>
+      </p>
+    </div>
+    <div class="photo">
+      <!-- Replace this placeholder with: <img src="images/profile.jpg" alt="Your Name"> -->
+      <div class="photo-placeholder">Your photo<br>(images/profile.jpg)</div>
+    </div>
+  </div>
+
+  <!-- ================= PAPERS ================= -->
+  <h2>Papers</h2>
+  <p class="note">* denotes equal contribution</p>
+
+  <!-- Copy one of these blocks for each paper. Add class "selected" to highlight a favorite. -->
+  <div class="paper">
+    <div class="thumb">
+      <!-- Replace with: <img src="images/paper1.png" alt=""> -->
+      <div class="thumb-placeholder">thumbnail</div>
+    </div>
+    <div class="meta">
+      <div class="title">Title of Your Most Recent Paper</div>
+      <div class="authors"><span class="me">Your Name</span>, Coauthor Two, Coauthor Three</div>
+      <div class="venue">Conference Name 2026</div>
+      <div class="tags">
+        [<a href="#">paper</a>][<a href="#">code</a>]
+      </div>
+    </div>
+  </div>
+
+  <div class="paper">
+    <div class="thumb">
+      <div class="thumb-placeholder">thumbnail</div>
+    </div>
+    <div class="meta">
+      <div class="title">Another Paper Title Goes Here</div>
+      <div class="authors">Coauthor One*, <span class="me">Your Name</span>*, Coauthor Three</div>
+      <div class="venue">Conference Name 2025</div>
+      <div class="tags">
+        [<a href="#">paper</a>][<a href="#">code</a>][<a href="#">demo</a>]
+      </div>
+    </div>
+  </div>
+
+  <div class="paper">
+    <div class="thumb">
+      <div class="thumb-placeholder">thumbnail</div>
+    </div>
+    <div class="meta">
+      <div class="title">A Third Example Paper Title</div>
+      <div class="authors"><span class="me">Your Name</span>, Coauthor Two</div>
+      <div class="venue">Workshop / Preprint 2025</div>
+      <div class="tags">
+        [<a href="#">paper</a>]
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HONORS ================= -->
+  <h2>Honors and Awards</h2>
+
+  <div class="honor">
+    <div class="what"><b>Fellowship or Award Name</b>, Awarding Organization</div>
+    <div class="when">09/2025&ndash;09/2027</div>
+  </div>
+  <div class="honor">
+    <div class="what"><b>Another Award</b> (one line of context, e.g., selection criteria), Organization</div>
+    <div class="when">12/2024</div>
+  </div>
+  <div class="honor">
+    <div class="what"><b>Scholarship Name</b> (Top X%), Organization</div>
+    <div class="when">10/2023</div>
+  </div>
+
+  <footer>
+    Last updated October 2026. Design inspired by
+    <a href="https://jonbarron.info/">Jon Barron's website</a>.
+  </footer>
+
+</div>
+</body>
+</html>
